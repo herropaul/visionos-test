@@ -12,6 +12,7 @@
 		1E2005D32A45504A00E1A0FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2005D22A45504A00E1A0FF /* ContentView.swift */; };
 		1E2005D52A45504D00E1A0FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2005D42A45504D00E1A0FF /* Assets.xcassets */; };
 		1E2005D82A45504D00E1A0FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2005D72A45504D00E1A0FF /* Preview Assets.xcassets */; };
+		1E305F4B2A4628A9004E1EF4 /* Satania.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E305F4A2A4628A9004E1EF4 /* Satania.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		1E2005D22A45504A00E1A0FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E2005D42A45504D00E1A0FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E2005D72A45504D00E1A0FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E305F4A2A4628A9004E1EF4 /* Satania.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Satania.png; path = ../../../Downloads/Satania.png; sourceTree = "<group>"; };
+		1E305F4C2A462911004E1EF4 /* Satania.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Satania.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 				1E2005D02A45504A00E1A0FF /* TestVisionOSApp.swift */,
 				1E2005D22A45504A00E1A0FF /* ContentView.swift */,
 				1E2005D42A45504D00E1A0FF /* Assets.xcassets */,
+				1E305F4A2A4628A9004E1EF4 /* Satania.png */,
 				1E2005D62A45504D00E1A0FF /* Preview Content */,
 			);
 			path = TestVisionOS;
@@ -74,6 +78,7 @@
 		1E2005D62A45504D00E1A0FF /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				1E305F4C2A462911004E1EF4 /* Satania.png */,
 				1E2005D72A45504D00E1A0FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -142,6 +147,7 @@
 			files = (
 				1E2005D82A45504D00E1A0FF /* Preview Assets.xcassets in Resources */,
 				1E2005D52A45504D00E1A0FF /* Assets.xcassets in Resources */,
+				1E305F4B2A4628A9004E1EF4 /* Satania.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
