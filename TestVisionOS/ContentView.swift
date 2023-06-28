@@ -10,11 +10,15 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    
+    @StateObject private var calculator = Calculator()
+    
     var body: some View {
         NavigationSplitView {
             List {
                 Text("Item")
                 Text("Item 2")
+                Text(calculator.display)
             }
             .navigationTitle("Sidebar")
         } detail: {
@@ -45,11 +49,24 @@ class Calculator: ObservableObject {
     private var shouldResetDisplay = false;
     
     
+    func handleButton(_ button: CalculatorButton) {
+        
+        switch button {
+        case .zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine:
+            handleNumericButton(button)
+        default:
+            print("Reached end of switch")
+        }
+    }
+    
     private func handleNumericButton(_ button: CalculatorButton) {
         let digit = button.rawValue;
         if (shouldResetDisplay) {
             display = digit;
             shouldResetDisplay = false;
+        }
+        else {
+            display += digit;
         }
     }
     
