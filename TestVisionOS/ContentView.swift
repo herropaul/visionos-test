@@ -13,6 +13,14 @@ struct ContentView: View {
     
     @StateObject private var calculator = Calculator()
     
+    let buttons: [[CalculatorButton]] = [
+        [.clear, .flipSign, .percentage, .divide],
+        [.seven, .eight, .nine, .multiply],
+        [.four, .five, .six, .minus],
+        [.one, .two, .three, .plus],
+        [.zero, .decimal, .equals]
+    ]
+    
     var body: some View {
         NavigationSplitView {
             List {
@@ -25,7 +33,19 @@ struct ContentView: View {
             VStack {
                 Model3D(named: "Scene", bundle: realityKitContentBundle)
                     .padding(.bottom, 50)
-                Text("hola")
+                ForEach(buttons, id: \.self ){
+                    row in HStack {
+                        ForEach(row, id: \.self){
+                            button in Button {
+                                calculator.handleButton(button)
+                            } label: {
+                                Text(button.rawValue)
+                                    .font(.title)
+                                    .frame(width: 50, height: 75)
+                            }
+                        }
+                    }
+                }
                 
             }
             .navigationTitle("Content")
