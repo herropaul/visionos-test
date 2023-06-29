@@ -26,13 +26,20 @@ struct ContentView: View {
             List {
                 Text("Item")
                 Text("Item 2")
-                Text(calculator.display)
             }
             .navigationTitle("Sidebar")
         } detail: {
             VStack {
                 Model3D(named: "Scene", bundle: realityKitContentBundle)
                     .padding(.bottom, 50)
+                HStack {
+                    /* Display values */
+                    Spacer()
+                    Text(calculator.display)
+                        .font(.system(size: 40))
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding()
+                }
                 ForEach(buttons, id: \.self ){
                     row in HStack {
                         ForEach(row, id: \.self){
@@ -74,6 +81,8 @@ class Calculator: ObservableObject {
         switch button {
         case .zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine:
             handleNumericButton(button)
+        case .clear:
+            handleClearButton()
         default:
             print("Reached end of switch")
         }
@@ -88,6 +97,12 @@ class Calculator: ObservableObject {
         else {
             display += digit;
         }
+    }
+    
+    private func handleClearButton() {
+        display = "0"
+        firstOperand = 0
+        secondOperand = 0
     }
     
 }
