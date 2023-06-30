@@ -83,6 +83,10 @@ class Calculator: ObservableObject {
             handleNumericButton(button)
         case .clear:
             handleClearButton()
+        case .decimal:
+            if(!display.contains(".")) {
+                display += "."
+            }
         default:
             print("Reached end of switch")
         }
